@@ -1,4 +1,4 @@
-FROM golang:1.15
+FROM golang:1.16
 
 LABEL maintainer="Chengkun Kang <460876880@qq.com>"
 
