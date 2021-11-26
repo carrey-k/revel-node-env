@@ -19,14 +19,14 @@ The docker image with revel and node/yarn installed based on golang docker image
 
 ### Plain:
 
-* `latest` _[(/plain/go-1.14.x/Dockerfile)](https://github.com/kangchengkun/revel/blob/master/plain/go-1.14.x/Dockerfile)_
-* `1.0.2` _[(/plain/go-1.14.4/Dockerfile)](https://github.com/kangchengkun/revel/blob/master/plain/go-1.14.4/Dockerfile)_
+* `latest` _[(/plain/go-1.14.x/Dockerfile)](https://github.com/kangchengkun/revel-node-env/blob/master/plain/go-1.14.x/Dockerfile)_
+* `1.0.2` _[(/plain/go-1.14.4/Dockerfile)](https://github.com/kangchengkun/revel-node-env/blob/master/plain/go-1.14.4/Dockerfile)_
 
 
 ### Node:
 
-* `latest` _[(/node/go-1.14.4/node-14.5.0/Dockerfile)](https://github.com/kangchengkun/revel/blob/master/node/go-1.14.x/node-14.5.0/Dockerfile)_
-* `1.0.2` _[(/node/go-1.14.4/node-14.5.0/Dockerfile)](https://github.com/kangchengkun/revel/blob/master/node/go-1.14.x/node-14.5.0/Dockerfile)_
+* `latest` _[(/node/go-1.14.4/node-14.5.0/Dockerfile)](https://github.com/kangchengkun/revel-node-env/blob/master/node/go-1.14.x/node-14.5.0/Dockerfile)_
+* `1.0.2` _[(/node/go-1.14.4/node-14.5.0/Dockerfile)](https://github.com/kangchengkun/revel-node-env/blob/master/node/go-1.14.x/node-14.5.0/Dockerfile)_
 
 ## Docker Images:
 
