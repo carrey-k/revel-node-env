@@ -40,6 +40,8 @@ WORKDIR ${HOME}
 RUN go get -u github.com/revel/revel
 RUN go get -u github.com/revel/cmd/revel
 
+RUN revel version
+
 # Define mountable directories.
 VOLUME ${HOME}/go
 VOLUME ["/etc/supervisor/conf.d"]

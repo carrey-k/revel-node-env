@@ -3,12 +3,13 @@ FROM golang:1.14
 LABEL maintainer="460876880@qq.com"
 
 ENV GOPATH /go
+ENV PATH $PATH:$GOPATH/bin:/usr/local/go/bin
 # ENV HTTP_PROXY "http://your-own-proxy-addr.your-org.com:3128"
 # ENV HTTPS_PROXY "http://your-own-proxy-addr.your-org.com:3128"
 
 RUN set -x \
-    && go get -u -v github.com/revel/revel \
-    && go get -u -v github.com/revel/cmd/revel \
+    && go get -u github.com/revel/revel \
+    && go get -u github.com/revel/cmd/revel \
     && go get -u github.com/jinzhu/copier \
     && go get -u github.com/golang/protobuf/proto \
     && go get -u github.com/globalsign/mgo/bson \
@@ -20,6 +21,8 @@ RUN set -x \
     && go get -u github.com/tealeg/xlsx \
     && go get -u google.golang.org/grpc \
     && go get -u github.com/lujiacn/mgodo
+
+RUN revel version
 
 # clear apt cache and remove unnecessary packages
 # RUN apt-get autoclean && apt-get -y autoremove

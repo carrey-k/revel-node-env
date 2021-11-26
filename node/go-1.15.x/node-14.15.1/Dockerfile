@@ -3,15 +3,16 @@ FROM golang:1.15
 LABEL maintainer="Chengkun Kang <460876880@qq.com>"
 
 ENV GOPATH /go
+ENV PATH $PATH:$GOPATH/bin:/usr/local/go/bin
 # ENV HTTP_PROXY "http://your-own-proxy-addr.your-org.com:3128"
 # ENV HTTPS_PROXY "http://your-own-proxy-addr.your-org.com:3128"
 
 RUN set -x \
-    && go get -u -v github.com/revel/revel \
-    && go get -u -v github.com/revel/cmd \
-    && go get -u -v github.com/revel/config \
-    && go get -u -v github.com/revel/cron \
-    && go get -u -v github.com/revel/modules \
+    && go get -u github.com/revel/revel \
+    && go get -u github.com/revel/cmd/revel \
+    && go get -u github.com/revel/config \
+    && go get -u github.com/revel/cron \
+    && go get -u github.com/revel/modules \
     && go get -u github.com/jinzhu/copier \
     && go get -u github.com/golang/protobuf/proto \
     && go get -u github.com/globalsign/mgo/bson \
@@ -27,6 +28,8 @@ RUN set -x \
     && go get -u golang.org/x/tools \
     && go get -u google.golang.org/grpc
 
+RUN revel version
+
 # Install node
 ENV NODE_VERSION "14.15.1"
 ENV NODE_ZIP "node-v$NODE_VERSION-linux-x64.tar.gz"
@@ -34,7 +37,7 @@ ENV NODE_ZIP "node-v$NODE_VERSION-linux-x64.tar.gz"
 RUN curl -SLO https://nodejs.org/dist/v$NODE_VERSION/$NODE_ZIP && \
     tar -xzf "$NODE_ZIP" -C /usr/local --strip-components 1 && \
     rm "$NODE_ZIP" && \
-    node -v && npm -v && npm install -g yarn && revel version
+    node -v && npm -v && npm install -g yarn
 
 # clear apt cache and remove unnecessary packages
 # RUN apt-get autoclean && apt-get -y autoremove
