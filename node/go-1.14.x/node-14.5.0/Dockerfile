@@ -19,7 +19,7 @@ RUN set -x \
     && go get -u github.com/teris-io/shortid \ 
     && go get -u github.com/tealeg/xlsx \
     && go get -u google.golang.org/grpc \
-    && go get -u gopkg.in/lujiacn/mgodo.v0
+    && go get -u github.com/lujiacn/mgodo
 
 # Install node
 ENV NODE_VERSION "14.5.0"

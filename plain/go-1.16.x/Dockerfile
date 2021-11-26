@@ -26,7 +26,7 @@ RUN set -x \
     && go get -u golang.org/x/sys \
     && go get -u golang.org/x/tools \
     && go get -u google.golang.org/grpc \
-    && go get -u gopkg.in/lujiacn/mgodo.v0
+    && go get -u github.com/lujiacn/mgodo
 
 # clear apt cache and remove unnecessary packages
 # RUN apt-get autoclean && apt-get -y autoremove
